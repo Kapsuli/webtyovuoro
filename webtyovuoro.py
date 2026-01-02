@@ -7,7 +7,7 @@ import streamlit as st
 # ── Apu‐funktiot ─────────────────────────────────
 
 def korjaa_sahkoposti_merkit(n):
-    return n.replace("ä","a").replace("ö","o").replace(",","").replace("-","").replace(" ","")
+    return n.replace("ä","a").replace("ö","o").replace(",","").replace("-","").replace(" ","").replace("ü","u")
 
 def korjaa_merkit(n):
     return n.replace(",","")
@@ -138,3 +138,4 @@ if uploaded and alkupv_input:
             file_name=f"teams_shifts_{alkupv_input.strftime('%Y-%m-%d')}.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
+
